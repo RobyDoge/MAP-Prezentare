@@ -1,0 +1,24 @@
+﻿<Window x:Class="Prezentare_Converters.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Prezentare_Converters"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <TextBox 
+            HorizontalAlignment="Left" 
+            Margin="50,143,0,0" 
+            TextWrapping="Wrap" 
+            VerticalAlignment="Top" 
+            Width="583" 
+            TextChanged="TextBox_TextChanged" 
+            Height="49"
+            GotFocus="TextBox_GotFocus" 
+            LostFocus="TextBox_LostFocus" 
+            Text="Introdu Ecuatia" FontSize="25" />
+        <Label Content="Calculator de ecuatii de gradul I&#xD;&#xA;" HorizontalAlignment="Left" Margin="50,19,0,0" VerticalAlignment="Top" Height="54" FontSize="30"/>
+
+    </Grid>
+</Window>
