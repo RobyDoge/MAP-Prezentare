@@ -78,24 +78,26 @@ namespace Prezentare_MultiValueConverter
                 if (parts[0].Contains("Constanta")) continue;
 
                 var symbol = parts[0].Trim();
+                
+
                 var number = float.Parse(parts[1].Trim());
                 dict.Add(symbol, number);
             }
             
 
             var nullSymbol = dict.FirstOrDefault(x => x.Value == 0.0f).Key;
-            dict["Temperatura"] += 273;
+            dict["Temperatura(C)"] += 273;
             string result = nullSymbol+" = ";
             switch (nullSymbol)
             {
-                case "Volum":
-                    return result +((dict["Temperatura"] * dict["Moli"] * 0.0821) / dict["Presiune"]);
-                case "Presiune":
-                    return result + ((dict["Temperatura"] * dict["Moli"] * 0.0821) / dict["Volum"]);
-                case "Temperatura":
-                    return result + (((dict["Presiune"] * dict["Volum"]) / (dict["Moli"] * 0.0821))-273);
-                case "Moli":
-                    return result + ((dict["Presiune"] * dict["Volum"]) / (dict["Temperatura"] * 0.0821));
+                case "Volum(L)":
+                    return result +((dict["Temperatura(C)"] * dict["Moli(mol)"] * 0.0821) / dict["Presiune(atm)"]);
+                case "Presiune(atm)":
+                    return result + ((dict["Temperatura(C)"] * dict["Moli(mol)"] * 0.0821) / dict["Volum(L)"]);
+                case "Temperatura(C)":
+                    return result + (((dict["Presiune(atm)"] * dict["Volum(L)"]) / (dict["Moli(mol)"] * 0.0821))-273);
+                case "Moli(mol)":
+                    return result + ((dict["Presiune(atm)"] * dict["Volum(L)"]) / (dict["Temperatura(C)"] * 0.0821));
                 default:
                     return null;
             }

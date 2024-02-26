@@ -28,7 +28,7 @@
                  HorizontalAlignment="Left" 
                  Margin="50,100,0,0" 
                  TextWrapping="Wrap" 
-                 Text="Volum = 0"
+                 Text="Volum(L) = 0"
                  VerticalAlignment="Top" 
                  Width="300" 
                  TextChanged="TextBox_TextChanged_1" 
@@ -37,7 +37,7 @@
                  HorizontalAlignment="Left" 
                  Margin="50,150,0,0" 
                  TextWrapping="Wrap"
-                 Text="Moli = 0" 
+                 Text="Moli(mol) = 0" 
                  VerticalAlignment="Top" 
                  Width="300" 
                  FontSize="20"
@@ -49,13 +49,13 @@
                  VerticalAlignment="Top"
                  Width="300"
                  TextChanged="TextBox_TextChanged_2"
-                 Text="Temperatura = 0"
+                 Text="Temperatura(C) = 0"
                  FontSize="20" />
         <TextBox x:Name="pressureBox"
                  HorizontalAlignment="Left"
                  Margin="50,250,0,0"
                  TextWrapping="Wrap"
-                 Text="Presiune = 0"
+                 Text="Presiune(atm) = 0"
                  VerticalAlignment="Top"
                  Width="300"
                  TextChanged="TextBox_TextChanged"
@@ -80,11 +80,11 @@
         <Button x:Name="resultButton"
                 Content="Calculeaza&#xD;&#xA;Elementul&#xD;&#xA;Lipsa"
                 HorizontalAlignment="Left"
-                Margin="482,150,0,0"
+                Margin="481,170,0,0"
                 VerticalAlignment="Top"
                 Click="Button_Click"
                 
-                FontSize="20" Height="80" Width="110">
+                FontSize="20" Height="89" Width="110">
             <Button.IsEnabled>
                 <MultiBinding Converter="{StaticResource sumConverter}">
                     <Binding ElementName="resultButton" Path="Text" />
